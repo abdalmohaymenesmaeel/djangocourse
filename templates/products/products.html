@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for pro in objs %}
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" style="width:100px;height:100px;" src="{{pro.image.url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{pro.name}}</h5>
+      <p class="card-text">{{pro.description}}</p>
+      {% comment %} <a href="#" class="btn btn-primary">Go somewhere</a> {% endcomment %}
+    </div>
+</div>
+
+
+
+{% endfor %}
+{% endblock content %}

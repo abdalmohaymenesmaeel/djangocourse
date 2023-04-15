@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}about{% endblock title %}
+{% block content %}
+
+    <h1>about</h1>
+    <hr>
+    <ul>
+    {% for i in lst %}
+        <li>{{i}}</li>
+    {% endfor %}
+    </ul>
+    <hr>
+    {% if mark > 60 and mark < 80 %}
+    Success
+    {% elif age == 15%}
+    Welcome 15
+    {% else %}
+    Welcome
+    {% endif %}
+    <hr>
+    {% comment %} 
+        {{name|length}}<br>
+        {{age|filesizeformat}}
+        {{lst}}
+        <br>
+        {{50|divisibleby:10}} 
+    {% endcomment %}
+{% endblock content %}
+
